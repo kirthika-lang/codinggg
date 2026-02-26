@@ -1,0 +1,188 @@
+/* ===============================
+   AI Smart Lighting - CSS
+   =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #141E30, #243B55);
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* ===============================
+   Header
+   =============================== */
+
+header {
+    padding: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+}
+
+/* ===============================
+   Main Container
+   =============================== */
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* ===============================
+   Upload Form
+   =============================== */
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+button {
+    padding: 12px 22px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #00c6ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #0072ff;
+    transform: scale(1.05);
+}
+
+/* ===============================
+   Image Preview
+   =============================== */
+
+#preview {
+    margin-top: 20px;
+    max-width: 250px;
+    border-radius: 12px;
+    display: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* ===============================
+   Loader
+   =============================== */
+
+#loader {
+    margin-top: 20px;
+    font-size: 18px;
+    display: none;
+}
+
+/* ===============================
+   Result Box
+   =============================== */
+
+.result-box {
+    margin: 40px auto;
+    width: 90%;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    display: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.result-box h2 {
+    margin-bottom: 15px;
+    color: #00eaff;
+}
+
+.result-box p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+/* ===============================
+   Similar Products
+   =============================== */
+
+.similar-products {
+    margin-top: 40px;
+}
+
+.similar-products h3 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.similar-card {
+    background: rgba(255,255,255,0.15);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    width: 220px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.similar-card:hover {
+    transform: translateY(-8px);
+}
+
+.similar-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   Animations
+   =============================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   Responsive Design
+   =============================== */
+
+@media (max-width: 768px) {
+
+    .similar-card {
+        width: 90%;
+    }
+
+    .result-box {
+        width: 95%;
+    }
+}
